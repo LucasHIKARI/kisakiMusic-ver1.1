@@ -2,8 +2,8 @@ import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Checkbox, Form, Input, message } from 'antd';
 import './login.less';
 import React, { useState, useCallback, useEffect } from 'react';
-import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
+// import Particles from 'react-tsparticles';
+// import { loadFull } from 'tsparticles';
 import axios from 'axios';
 import { Redirect, useHistory } from 'umi';
 import jwtDecode from 'jwt-decode';
@@ -136,7 +136,7 @@ export default function login() {
 
   return (
     <div className="loginin" style={{ height: '100vh' }}>
-      <Particles
+      {/* <Particles
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
@@ -776,7 +776,7 @@ export default function login() {
             },
           },
         }}
-      />
+      /> */}
       <div className="loginform">
         <div className="logintitle">バクエンドシステム サインイン</div>
         <Form
