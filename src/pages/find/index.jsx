@@ -108,7 +108,7 @@ export default function index() {
     (searchSong) => {
       console.log(querySong);
       axios
-        .get('http://cloud-music-ua22.vercel.app/search?_embed=children&', {
+        .get('https://cloud-music-ua22.vercel.app/search?_embed=children&', {
           params: {
             /* keywords: (searchSong==null&&querySong!==null)?querySong:searchSong */
             keywords: querySong,
@@ -147,7 +147,7 @@ export default function index() {
     store.dispatch({ type: 'query_song', data: value });
 
     axios
-      .get('http://cloud-music-ua22.vercel.app/search?_embed=children&', {
+      .get('https://cloud-music-ua22.vercel.app/search?_embed=children&', {
         params: {
           keywords: value,
         },

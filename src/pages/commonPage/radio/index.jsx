@@ -77,7 +77,7 @@ export default function index() {
   useEffect(() => {
     // ### 电台 - 推荐
     axios
-      .get('http://cloud-music-ua22.vercel.app/dj/recommend')
+      .get('https://cloud-music-ua22.vercel.app/dj/recommend')
       .then((res) => {
         // console.log(res);
         setRadioList(res.data.djRadios);
@@ -88,7 +88,7 @@ export default function index() {
 
     // ### 电台 - 分类推荐 ACG
     axios
-      .get('http://cloud-music-ua22.vercel.app/dj/recommend/type?type=3001')
+      .get('https://cloud-music-ua22.vercel.app/dj/recommend/type?type=3001')
       .then((res) => {
         setACGRadioList(res.data.djRadios);
       })
@@ -98,7 +98,7 @@ export default function index() {
 
     // ### 电台 - 分类推荐 生活
     axios
-      .get('http://cloud-music-ua22.vercel.app/dj/recommend/type?type=6')
+      .get('https://cloud-music-ua22.vercel.app/dj/recommend/type?type=6')
       .then((res) => {
         setLiveRadioList(res.data.djRadios);
       })
@@ -108,7 +108,7 @@ export default function index() {
 
     // ### 电台 - 分类推荐 人文历史
     axios
-      .get('http://cloud-music-ua22.vercel.app/dj/recommend/type?type=3080098')
+      .get('https://cloud-music-ua22.vercel.app/dj/recommend/type?type=3080098')
       .then((res) => {
         setHistoryRadioList(res.data.djRadios);
       })
@@ -118,7 +118,7 @@ export default function index() {
 
     // ### 电台 - 分类推荐 情感
     axios
-      .get('http://cloud-music-ua22.vercel.app/dj/recommend/type?type=3')
+      .get('https://cloud-music-ua22.vercel.app/dj/recommend/type?type=3')
       .then((res) => {
         setdramaList(res.data.djRadios);
       })

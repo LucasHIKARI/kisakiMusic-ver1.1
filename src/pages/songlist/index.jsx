@@ -111,7 +111,7 @@ export default function index() {
 
   useEffect((searchSong) => {
     axios
-      .get('http://cloud-music-ua22.vercel.app/top/playlist/highquality')
+      .get('https://cloud-music-ua22.vercel.app/top/playlist/highquality')
       .then((res) => {
         console.log(res);
         sethighQualitySongList(res.data.playlists);
@@ -125,7 +125,7 @@ export default function index() {
       console.log(value)
       store.dispatch({type:"querySong",data:value})
   
-    axios.get('http://cloud-music-ua22.vercel.app/search?_embed=children&', {
+    axios.get('https://cloud-music-ua22.vercel.app/search?_embed=children&', {
       params: {
         keywords:querySong
       }

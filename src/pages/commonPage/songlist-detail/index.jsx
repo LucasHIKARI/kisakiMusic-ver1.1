@@ -71,7 +71,7 @@ export default function index() {
   useEffect(() => {
     // 歌单详情
     axios
-      .get('http://cloud-music-ua22.vercel.app/playlist/detail', {
+      .get('https://cloud-music-ua22.vercel.app/playlist/detail', {
         params: {
           id: songListId,
         },
@@ -92,7 +92,7 @@ export default function index() {
     console.log(record);
     setSongId(record.id);
     axios
-      .get('http://cloud-music-ua22.vercel.app/song/url', {
+      .get('https://cloud-music-ua22.vercel.app/song/url', {
         params: {
           id: record.id,
         },

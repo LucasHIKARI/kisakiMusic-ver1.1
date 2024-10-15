@@ -94,7 +94,7 @@ export default function list() {
     // console.log(item)
     // console.log(table)
     settable(table.filter((data) => data.id !== item.id));
-    axios.delete(`http://cloud-music-ua22.vercel.app/roles/${item.id}`);
+    axios.delete(`https://cloud-music-ua22.vercel.app/roles/${item.id}`);
   };
   useEffect(() => {
     axios.get('http://localhost:8800/right-manage/role/list').then((res) => {
@@ -105,7 +105,7 @@ export default function list() {
 
   // 返回的数据集没有嵌套数组，之后再说
   /*    useEffect(() => {
-        axios.get('http://cloud-music-ua22.vercel.app/rights?_embed=children').then(
+        axios.get('https://cloud-music-ua22.vercel.app/rights?_embed=children').then(
             res => {
                 
                 settreeData(res.data)
@@ -126,7 +126,7 @@ export default function list() {
         return item;
       }),
     );
-    axios.patch(`http://cloud-music-ua22.vercel.app/roles/${rightsid}`, {
+    axios.patch(`https://cloud-music-ua22.vercel.app/roles/${rightsid}`, {
       rights,
     });
   };

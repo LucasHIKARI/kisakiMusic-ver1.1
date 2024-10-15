@@ -29,12 +29,12 @@ const Add = () => {
 
   useEffect(() => {
     axios
-      .get(`http://cloud-music-ua22.vercel.app/categories`)
+      .get(`https://cloud-music-ua22.vercel.app/categories`)
       .then((res) => setcate(res.data));
   }, []);
   const handlenews = (aduitnum) => {
     axios
-      .post('http://cloud-music-ua22.vercel.app/news', {
+      .post('https://cloud-music-ua22.vercel.app/news', {
         ...content,
         content: editorState,
         region: User.region ? User.region : 'global',

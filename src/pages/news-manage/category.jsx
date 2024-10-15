@@ -10,7 +10,7 @@ const EditableContext = React.createContext(null);
 const category = () => {
   const [table, settable] = useState([]);
   useEffect(() => {
-    axios.get('http://cloud-music-ua22.vercel.app/categories').then((res) => {
+    axios.get('https://cloud-music-ua22.vercel.app/categories').then((res) => {
       settable(res.data);
     });
   }, []);
@@ -92,7 +92,7 @@ const category = () => {
   };
   const deletea = (item) => {
     settable(table.filter((data) => data.id !== item.id));
-    axios.delete(`http://cloud-music-ua22.vercel.app/categories/${item.id}`);
+    axios.delete(`https://cloud-music-ua22.vercel.app/categories/${item.id}`);
   };
 
   const EditableCell = ({

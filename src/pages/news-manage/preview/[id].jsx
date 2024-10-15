@@ -10,7 +10,7 @@ const id = () => {
   useEffect(() => {
     axios
       .get(
-        `http://cloud-music-ua22.vercel.app/news/${params.id}?_expand=category&_expand=role`,
+        `https://cloud-music-ua22.vercel.app/news/${params.id}?_expand=category&_expand=role`,
       )
       .then((res) => {
         setnewsinfo(res.data);

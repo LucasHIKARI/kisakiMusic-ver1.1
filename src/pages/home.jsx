@@ -63,7 +63,7 @@ const columnList = [
     key: 'id',
     render: (id, text, record) => {
       // console.log(id);
-      /*      axios.get('http://cloud-music-ua22.vercel.app/song/url?id='+id).then(
+      /*      axios.get('https://cloud-music-ua22.vercel.app/song/url?id='+id).then(
                 res => {
             
                     setsongUrl(res.data.data[0].url);
@@ -167,7 +167,7 @@ const home = () => {
     );
 
     axios
-      .get('http://cloud-music-ua22.vercel.app/top/playlist?order=hot')
+      .get('https://cloud-music-ua22.vercel.app/top/playlist?order=hot')
       .then((res) => {
         /*   console.log(res);
                   console.log(res.data.playlists);
@@ -181,7 +181,7 @@ const home = () => {
       });
 
     axios
-      .get('http://cloud-music-ua22.vercel.app/top/playlist?cat=ACG')
+      .get('https://cloud-music-ua22.vercel.app/top/playlist?cat=ACG')
       .then((res) => {
         setGuessSongList(res.data.playlists);
       })
@@ -191,7 +191,7 @@ const home = () => {
 
     // 新歌上架的接口关了，先用一般的接口
     axios
-      .get('http://cloud-music-ua22.vercel.app/top/playlist?order=日语')
+      .get('https://cloud-music-ua22.vercel.app/top/playlist?order=日语')
       .then((res) => {
         setNewSongList(res.data.playlists);
       })
@@ -201,7 +201,7 @@ const home = () => {
 
     // ### 日语新歌榜
     axios
-      .get('http://cloud-music-ua22.vercel.app/top/song?type=8')
+      .get('https://cloud-music-ua22.vercel.app/top/song?type=8')
       .then((res) => {
         /* console.log(res); */
         setJapenSongList(res.data.data);
@@ -212,7 +212,7 @@ const home = () => {
 
     // ### 新歌榜
     axios
-      .get('http://cloud-music-ua22.vercel.app/top/song?type=0')
+      .get('https://cloud-music-ua22.vercel.app/top/song?type=0')
       .then((res) => {
         setSongList(res.data.data);
       })

@@ -19,7 +19,7 @@ const draft = () => {
   useEffect(() => {
     axios
       .get(
-        `http://cloud-music-ua22.vercel.app/news?author=${username}&auditState=0&_expand=category`,
+        `https://cloud-music-ua22.vercel.app/news?author=${username}&auditState=0&_expand=category`,
       )
       .then((res) => {
         settable(res.data);
@@ -84,7 +84,7 @@ const draft = () => {
   ];
   const handleup = (id) => {
     axios
-      .patch(`http://cloud-music-ua22.vercel.app/news/${id}`, {
+      .patch(`https://cloud-music-ua22.vercel.app/news/${id}`, {
         auditState: 1,
       })
       .then((res) => {
@@ -108,7 +108,7 @@ const draft = () => {
   };
   const deletea = (item) => {
     settable(table.filter((data) => data.id !== item.id));
-    axios.delete(`http://cloud-music-ua22.vercel.app/news/${item.id}`);
+    axios.delete(`https://cloud-music-ua22.vercel.app/news/${item.id}`);
   };
 
   return (

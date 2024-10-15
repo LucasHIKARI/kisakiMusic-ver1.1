@@ -23,7 +23,7 @@ export default function index() {
 
   useEffect(() => {
     axios
-      .get('http://cloud-music-ua22.vercel.app/top/playlist?cat=ACG')
+      .get('https://cloud-music-ua22.vercel.app/top/playlist?cat=ACG')
       .then((res) => {
         setGuessSongList2(res.data.playlists);
       })
@@ -32,7 +32,7 @@ export default function index() {
       });
 
     axios
-      .get('http://cloud-music-ua22.vercel.app/top/playlist?cat=日语')
+      .get('https://cloud-music-ua22.vercel.app/top/playlist?cat=日语')
       .then((res) => {
         setHotSongList(res.data.playlists);
       })
